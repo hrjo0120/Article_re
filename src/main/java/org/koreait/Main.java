@@ -50,8 +50,10 @@ public class Main {
             } else if(cmdBits[1].equals("list")) {
                 System.out.println("== 게시글 목록 ==");
                 System.out.println("  번호  /  제목  /  내용");
+
                 for(int i = articles.size() - 1; i >= 0; i--) { // 번호 역순
-                    System.out.print("  %d  /  %s  /  %s  ", );
+                    Article article = articles.get(i);
+                    System.out.printf("  %d  /  %s  /  %s  ", article.getId(), article.getTitle(),article.getBody());
                 }
             }
 
